@@ -5,14 +5,14 @@ function U(id) { return "https://images.unsplash.com/photo-" + id + "?w=800&q=80
 
 // stripeLink は Stripe の支払いリンク（空なら「会場で販売中」と表示）。
 window.CHARMIX_PRODUCTS = [
-  { name: "カラフル バッグチャーム", category: "keyring", price: 2400, image: U("1778278553445-9cb87c89c60f"), stripeLink: "", color: "#FFC2D6" },
-  { name: "ビーズ キーリング", category: "keyring", price: 2200, image: U("1759493946930-150aee20977c"), stripeLink: "", color: "#FFE48A" },
-  { name: "ブルーハート キーリング", category: "keyring", price: 2200, image: U("1759999362893-cdf9d3278d4d"), stripeLink: "", color: "#A8D8FF" },
-  { name: "アップル キーリング", category: "keyring", price: 2400, image: U("1784837101159-6cca315ba947"), stripeLink: "", color: "#FF9E9E" },
-  { name: "シルバーハート ネックレス", category: "necklace", price: 3800, image: U("1676329947145-99145926d3eb"), stripeLink: "", color: "#D9CCFF" },
-  { name: "ビーズ ネックレス", category: "necklace", price: 3600, image: U("1583484370773-c1af4e528d5e"), stripeLink: "", color: "#FFD9B3" },
-  { name: "ピンクハート ブレスレット", category: "bracelet", price: 3200, image: U("1676296227404-9a7c32bb826d"), stripeLink: "", color: "#FFC2D6" },
-  { name: "カラフルリンク ブレスレット", category: "bracelet", price: 3400, image: U("1786052345722-b8873a0f9d2e"), stripeLink: "", color: "#B8F0DC" },
+  { name: "カラフル バッグチャーム", en: "bag charm 01", category: "keyring", price: 2400, image: U("1778278553445-9cb87c89c60f"), stripeLink: "", color: "#FFC2D6" },
+  { name: "ビーズ キーリング", en: "beads keyring 01", category: "keyring", price: 2200, image: U("1759493946930-150aee20977c"), stripeLink: "", color: "#FFE48A" },
+  { name: "ブルーハート キーリング", en: "heart keyring 02", category: "keyring", price: 2200, image: U("1759999362893-cdf9d3278d4d"), stripeLink: "", color: "#A8D8FF" },
+  { name: "アップル キーリング", en: "apple keyring 01", category: "keyring", price: 2400, image: U("1784837101159-6cca315ba947"), stripeLink: "", color: "#FF9E9E" },
+  { name: "シルバーハート ネックレス", en: "heart necklace 01", category: "necklace", price: 3800, image: U("1676329947145-99145926d3eb"), stripeLink: "", color: "#D9CCFF" },
+  { name: "ビーズ ネックレス", en: "beads necklace 01", category: "necklace", price: 3600, image: U("1583484370773-c1af4e528d5e"), stripeLink: "", color: "#FFD9B3" },
+  { name: "ピンクハート ブレスレット", en: "heart bracelet 01", category: "bracelet", price: 3200, image: U("1676296227404-9a7c32bb826d"), stripeLink: "", color: "#FFC2D6" },
+  { name: "カラフルリンク ブレスレット", en: "link bracelet 01", category: "bracelet", price: 3400, image: U("1786052345722-b8873a0f9d2e"), stripeLink: "", color: "#B8F0DC" },
 ];
 
 // ポップアップ出店スケジュール（日付の古いものは自動で「終了」表示）

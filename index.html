@@ -3,96 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Charmix | 選んで、つけて、自分だけのチャーム</title>
-  <meta name="description" content="Charmixは、好きなチャームを選んで自由にカスタマイズできるキーリング・ネックレス・ブレスレットのブランドです。全国のイベントでポップアップ出店中。">
-  <meta property="og:title" content="Charmix">
-  <meta property="og:description" content="選んで、つけて、自分だけのチャーム。">
+  <title>CHARMIX</title>
+  <meta name="description" content="好きなチャームを選んで、自分だけのひとつに。キーリング・ネックレス・ブレスレットのカスタマイズブランド CHARMIX。">
+  <meta name="robots" content="noindex">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header class="nav">
-    <a href="#" class="logo">Charmix</a>
-    <nav>
-      <a href="#products">Items</a>
-      <a href="#about">About</a>
-      <a href="#events">Pop-up</a>
+  <header class="header">
+    <a href="#" class="logo">CHARMIX</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#">HOME</a>
+      <a href="#popup">POP-UP</a>
+      <a href="#online">ONLINE</a>
+      <a href="#concept">CONCEPT</a>
+      <a href="#links">SNS</a>
+      <a href="mailto:hello@example.com">CONTACT</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">Mix your charms, make it yours.</p>
-      <h1>選んで、つけて、<br><span class="nw"><span class="hl">自分だけ</span>のチャーム。</span></h1>
-      <p class="lead">好きなチャームを選んで、キーリング・ネックレス・ブレスレットに。<br>その日の気分で組み合わせる、ちいさな楽しさを。</p>
-      <div class="hero-cta">
-        <a href="#events" class="btn btn-primary">次のポップアップを見る</a>
-        <a href="#products" class="btn btn-ghost">アイテム一覧</a>
-      </div>
+  <section class="hero" aria-label="CHARMIX">
+    <div class="slides">
+      <img class="slide is-active" src="https://images.unsplash.com/photo-1631050164355-822f8ab7dcb9?w=2400&q=80&auto=format&fit=crop" alt="">
+      <img class="slide" src="https://images.unsplash.com/photo-1631050165122-626a1377fbce?w=2400&q=80&auto=format&fit=crop" alt="">
+      <img class="slide" src="https://images.unsplash.com/photo-1778278553445-9cb87c89c60f?w=2400&q=80&auto=format&fit=crop" alt="">
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="ring"></div>
-      <span class="charm c1">★</span>
-      <span class="charm c2">♥</span>
-      <span class="charm c3">✿</span>
-      <span class="charm c4">●</span>
-      <span class="charm c5">☺</span>
+    <div class="dots"><button class="is-active" aria-label="1"></button><button aria-label="2"></button><button aria-label="3"></button></div>
+  </section>
+
+  <section class="intro">
+    <p class="eyebrow">MIX YOUR CHARMS</p>
+    <p class="intro-text">好きなチャームを、好きなだけ。<br>その日の気分で選んで、<br>自分だけのひとつに。</p>
+  </section>
+
+  <section class="block" id="online">
+    <h2 class="title">RECOMMEND</h2>
+    <div class="cats">
+      <button class="is-active" data-cat="">ALL ITEM</button>
+      <button data-cat="keyring">KEYRING</button>
+      <button data-cat="necklace">NECKLACE</button>
+      <button data-cat="bracelet">BRACELET</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="more"><a href="#online">VIEW ALL</a></p>
+  </section>
+
+  <section class="block" id="popup">
+    <h2 class="title">POP-UP</h2>
+    <ul class="news" id="news"></ul>
+    <p class="more"><a id="ig-more" href="#" target="_blank" rel="noopener">MORE VIEW</a></p>
+  </section>
+
+  <section class="concept" id="concept">
+    <div class="concept-img" id="owner-photo"></div>
+    <div class="concept-text">
+      <h2 class="title left">CONCEPT</h2>
+      <p>ちいさなチャームが、毎日の気分を少しだけ変えてくれる。<br>色、かたち、組み合わせ。選ぶ時間そのものを楽しんでほしくて、CHARMIXを始めました。</p>
+      <p>（ここに自己紹介が入ります）</p>
+      <p class="sign"><span id="owner-name"></span></p>
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>KEYRING ✦ NECKLACE ✦ BRACELET ✦ CUSTOM CHARMS ✦ POP-UP STORE ✦ </span>
-      <span>KEYRING ✦ NECKLACE ✦ BRACELET ✦ CUSTOM CHARMS ✦ POP-UP STORE ✦ </span>
+  <section class="block" id="links">
+    <h2 class="title">LINKS</h2>
+    <div class="links">
+      <a class="link-card" id="ig-link" href="#" target="_blank" rel="noopener">
+        <div class="link-img"><img src="https://images.unsplash.com/photo-1759493946930-150aee20977c?w=1200&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <p class="link-name">Instagram</p><p class="link-sub">@charmix</p>
+      </a>
+      <a class="link-card" href="#popup">
+        <div class="link-img"><img src="https://images.unsplash.com/photo-1760144597396-4f902f5026a8?w=1200&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <p class="link-name">Pop-up Store</p><p class="link-sub">schedule</p>
+      </a>
     </div>
-  </div>
-
-  <section id="how" class="section how">
-    <h2 class="section-title">How to <span class="hl">Mix</span></h2>
-    <ol class="steps">
-      <li><span class="step-no">1</span><h3>ベースを選ぶ</h3><p>キーリング、ネックレス、ブレスレットから。</p></li>
-      <li><span class="step-no">2</span><h3>チャームを選ぶ</h3><p>色も形もたくさん。好きなだけ組み合わせて。</p></li>
-      <li><span class="step-no">3</span><h3>その場で完成</h3><p>会場ですぐに仕上げてお渡しします。</p></li>
-    </ol>
-  </section>
-
-  <section id="products" class="section">
-    <h2 class="section-title">Items</h2>
-    <div class="filters" role="tablist">
-      <button class="chip active" data-filter="all">すべて</button>
-      <button class="chip" data-filter="keyring">キーリング</button>
-      <button class="chip" data-filter="necklace">ネックレス</button>
-      <button class="chip" data-filter="bracelet">ブレスレット</button>
-    </div>
-    <div id="product-grid" class="grid"></div>
-  </section>
-
-  <section id="about" class="section about">
-    <div class="about-photo" id="owner-photo"><span>Photo</span></div>
-    <div class="about-text">
-      <h2 class="section-title left">About</h2>
-      <p>はじめまして、Charmixの<span id="owner-name">オーナー</span>です。</p>
-      <p>（ここに自己紹介とブランドを始めたきっかけを書きます。どんな思いでチャームを作っているか、ポップアップでお客さんと一緒に選ぶ時間が好きなこと、など。）</p>
-      <a id="ig-link" class="btn btn-primary" href="#" target="_blank" rel="noopener">Instagramを見る</a>
-    </div>
-  </section>
-
-  <section id="events" class="section events">
-    <h2 class="section-title">Pop-up Schedule</h2>
-    <ul id="event-list" class="event-list"></ul>
-    <p class="note">最新情報はInstagramでお知らせします。</p>
   </section>
 
   <footer class="footer">
-    <p class="logo">Charmix</p>
-    <p><a href="tokushoho.html">特定商取引法に基づく表記</a></p>
-    <p class="copy">© <span id="year"></span> Charmix</p>
+    <nav class="foot-nav">
+      <a href="#">USER GUIDE</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#links">INSTAGRAM</a>
+    </nav>
+    <p class="copy">© <span id="year"></span> - CHARMIX</p>
   </footer>
 
+  <a class="design-tag" href="designs/">他のデザイン案</a>
+
   <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
