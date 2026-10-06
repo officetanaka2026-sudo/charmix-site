@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charmix | Mix your charms, make it yours</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="design-tag" href="../">Design 06 · Claymi Style ← 一覧</a>
+
+  <div class="announce">Next pop-up: <b id="next-popup">coming soon</b></div>
+
+  <header class="header">
+    <nav class="menu-top">
+      <a href="#shop">Shop</a>
+      <a href="#charms">Our Charms</a>
+      <a href="#about">About Us</a>
+      <a href="#popup">Pop-up</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#" class="logo">Charmix</a>
+    <a class="ig" id="ig-top" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    </a>
+  </header>
+
+  <section class="hero">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1760144597396-4f902f5026a8?w=2400&q=80&auto=format&fit=crop" alt="Colorful charms on display">
+    <div class="hero-overlay">
+      <p class="hero-title">Charmix</p>
+      <p class="hero-sub">Mix your charms, make it yours.</p>
+    </div>
+  </section>
+
+  <nav class="big-menu" id="shop">
+    <a class="big-btn" href="#charms" data-cat="keyring">Keyrings</a>
+    <a class="big-btn" href="#charms" data-cat="necklace">Necklaces</a>
+    <a class="big-btn" href="#charms" data-cat="bracelet">Bracelets</a>
+    <a class="big-btn alt" href="#popup">Pop-up Schedule</a>
+  </nav>
+
+  <section class="section carousel-sec" id="charms">
+    <div class="sec-head">
+      <h2>Our Charms</h2>
+      <div class="arrows">
+        <button class="arrow" data-dir="-1" aria-label="Previous">‹</button>
+        <span class="count" id="count">1 / 1</span>
+        <button class="arrow" data-dir="1" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="carousel" id="carousel"></div>
+    <div class="center"><a class="btn" href="#popup">Get Mixing!</a></div>
+  </section>
+
+  <section class="feature">
+    <div class="oval-wrap">
+      <div class="oval"><img src="https://images.unsplash.com/photo-1778278553445-9cb87c89c60f?w=1000&q=80&auto=format&fit=crop" alt="Colorful bag charms"></div>
+    </div>
+    <div class="feature-text">
+      <h2>Why Charmix?</h2>
+      <p class="tagline">Pick the charms you love, and make something that's only yours.</p>
+      <p>好きなチャームを選んで、キーリング・ネックレス・ブレスレットに。色も形もたくさんあるから、その日の気分や推しカラーで自由に組み合わせられます。</p>
+    </div>
+  </section>
+
+  <section class="feature reverse tint">
+    <div class="oval-wrap">
+      <div class="oval egg"><img src="https://images.unsplash.com/photo-1676296227404-9a7c32bb826d?w=1000&q=80&auto=format&fit=crop" alt="Charm bracelet"></div>
+    </div>
+    <div class="feature-text">
+      <h2>For Everyone!</h2>
+      <p class="tagline">No experience? No problem!</p>
+      <p>選ぶだけで、その場でスタッフが仕上げます。プレゼントにも、おそろいにも。はじめての方も大歓迎です。</p>
+    </div>
+  </section>
+
+  <section class="section compare-sec">
+    <h2>Slide to see the mix!</h2>
+    <p class="tagline">From a box of charms to your one-and-only piece.</p>
+    <div class="compare" id="compare">
+      <img src="https://images.unsplash.com/photo-1560847133-e6f64dc352ea?w=1600&q=80&auto=format&fit=crop" alt="Charms before">
+      <div class="compare-top"><img src="https://images.unsplash.com/photo-1759493946930-150aee20977c?w=1600&q=80&auto=format&fit=crop" alt="Finished charms"></div>
+      <span class="label l-before">Before</span><span class="label l-after">After</span>
+      <div class="handle"><span>‹ ›</span></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Compare">
+    </div>
+  </section>
+
+  <section class="section fun">
+    <h2>Stress Free Fun!</h2>
+    <div class="icons">
+      <div class="icon-item"><div class="icon">✦</div><h3>Pick Your Charms</h3><p>たくさんのチャームから自由に選べます。</p></div>
+      <div class="icon-item"><div class="icon">⏱</div><h3>Made on the Spot</h3><p>会場ですぐに仕上げてお渡し。</p></div>
+      <div class="icon-item"><div class="icon">🎁</div><h3>The Perfect Gift</h3><p>ラッピングもおまかせください。</p></div>
+      <div class="icon-item"><div class="icon">♡</div><h3>Pop-up Only</h3><p>イベント限定のチャームも。</p></div>
+    </div>
+  </section>
+
+  <section class="section popup tint" id="popup">
+    <h2>Pop-up Schedule</h2>
+    <ul class="event-list" id="event-list"></ul>
+  </section>
+
+  <section class="feature" id="about">
+    <div class="oval-wrap">
+      <div class="oval mirror" id="owner-photo"></div>
+    </div>
+    <div class="feature-text">
+      <h2>About Us</h2>
+      <p class="tagline">Hi, I'm <span id="owner-name">the maker</span>!</p>
+      <p>（ここに自己紹介とブランドを始めたきっかけが入ります。どんな思いでチャームを選んでいるか、ポップアップでお客さんと一緒に選ぶ時間が好きなこと、など。）</p>
+      <a class="btn" id="ig-link" href="#" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <h2>FAQ</h2>
+    <details><summary>How long does it take?</summary><p>チャームを選んでから、だいたい5〜10分で仕上がります。</p></details>
+    <details><summary>Can I buy online?</summary><p>一部の商品はオンラインでも購入できます。商品カードの「Buy」ボタンからどうぞ。</p></details>
+    <details><summary>Do you offer gift wrapping?</summary><p>はい、会場で無料でラッピングします。</p></details>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Charmix</div>
+    <nav class="footer-links">
+      <a href="../../tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="#faq">FAQ</a>
+      <a id="ig-foot" href="#" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="copy">© <span id="year"></span> Charmix</p>
+  </footer>
+
+  <script src="../../data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
