@@ -17,9 +17,7 @@ window.CHARMIX_PRODUCTS = [
 
 // ポップアップ出店スケジュール（日付の古いものは自動で「終了」表示）
 window.CHARMIX_EVENTS = [
-  { date: "2026-11-03", place: "（会場名）", area: "東京・渋谷", note: "11:00–18:00" },
-  { date: "2026-11-21", place: "（会場名）", area: "横浜", note: "2日間開催" },
-  { date: "2026-12-12", place: "（会場名）", area: "東京・吉祥寺", note: "クリスマスマーケット" },
+  // 例：{ date: "2026-11-03", place: "会場名", area: "東京・渋谷", note: "11:00–18:00" },
 ];
 
 window.CHARMIX_INFO = {

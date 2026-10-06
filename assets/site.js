@@ -38,7 +38,9 @@
   // products
   var grid = document.getElementById("grid");
   function render(cat) {
-    grid.innerHTML = products.filter(function (p) { return !cat || p.category === cat; }).map(function (p) {
+    var list = products.filter(function (p) { return !/^https?:/.test(p.image || "") && (!cat || p.category === cat); });
+    if (!list.length) { grid.innerHTML = '<p class="empty">COMING SOON</p>'; return; }
+    grid.innerHTML = list.map(function (p) {
       var tag = p.stripeLink ? "a" : "div";
       var href = p.stripeLink ? ' href="' + esc(p.stripeLink) + '" target="_blank" rel="noopener"' : "";
       return "<" + tag + ' class="item"' + href + '><div class="item-img"><img src="' + esc(src(p.image)) + '" alt="' + esc(p.name) + '" loading="lazy"></div>' +
@@ -64,11 +66,9 @@
     return '<li class="' + (past ? "past" : "") + '"><span class="date">' + e.date.replace(/-/g, ".") + "</span>" +
       '<span class="place">' + esc(e.place) + (past ? "（終了）" : "") + "</span>" +
       '<span class="area">' + esc(e.area) + (e.note ? " / " + esc(e.note) : "") + "</span></li>";
-  }).join("") || "<li><span class=\"place\">Coming soon</span></li>";
+  }).join("") || '<li class="soon"><span class="place">次回の出店は決まり次第、Instagramでお知らせします。</span></li>';
 
   // concept / links
-  if (info.ownerPhoto) document.getElementById("owner-photo").innerHTML = '<img src="' + esc(src(info.ownerPhoto)) + '" alt="" loading="lazy">';
-  if (info.ownerName) document.getElementById("owner-name").textContent = "— " + info.ownerName;
   if (info.instagram) {
     document.getElementById("ig-link").href = info.instagram;
     document.getElementById("ig-more").href = info.instagram;
