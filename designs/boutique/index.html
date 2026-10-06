@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charmix | Boutique</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="t-boutique">
+  <a class="design-tag" href="../">Design 04 · 洗練ブランド ← 一覧</a>
+  <header class="nav">
+    <a href="#" class="logo">Charmix</a>
+    <nav>
+      <a href="#products">Items</a>
+      <a href="#about">About</a>
+      <a href="#events">Pop-up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Customizable charm accessories</p>
+      <h1>選んで、つけて、<br><span class="nw"><span class="hl">自分だけ</span>のチャーム。</span></h1>
+      <p class="lead">好きなチャームを選んで、キーリング・ネックレス・ブレスレットに。その日の気分で組み合わせる、ちいさな楽しさを。</p>
+      <div class="hero-cta">
+        <a href="#events" class="btn btn-primary">次のポップアップを見る</a>
+        <a href="#products" class="btn btn-ghost">アイテム一覧</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ph-frame f0" data-hero="0"></div>
+      <div class="ph-frame f1" data-hero="1"></div>
+      <div class="ph-frame f2" data-hero="2"></div>
+      <span class="d dot dt1"></span><span class="d dot dt2"></span><span class="d dot dt3"></span><span class="d dot dt4"></span>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true"><div class="band-track"><span>KEYRING — NECKLACE — BRACELET — CUSTOM CHARMS — KEYRING — NECKLACE — BRACELET — CUSTOM CHARMS — </span><span>KEYRING — NECKLACE — BRACELET — CUSTOM CHARMS — KEYRING — NECKLACE — BRACELET — CUSTOM CHARMS — </span></div></div>
+
+  <section id="how" class="section how">
+    <h2 class="section-title">How to Mix</h2>
+    <ol class="steps">
+      <li><span class="step-no">1</span><h3>ベースを選ぶ</h3><p>キーリング、ネックレス、ブレスレットから。</p></li>
+      <li><span class="step-no">2</span><h3>チャームを選ぶ</h3><p>色も形もたくさん。好きなだけ組み合わせて。</p></li>
+      <li><span class="step-no">3</span><h3>その場で完成</h3><p>会場ですぐに仕上げてお渡しします。</p></li>
+    </ol>
+  </section>
+
+  <section id="products" class="section products">
+    <h2 class="section-title">Collection</h2>
+    <div class="filters">
+      <button class="chip active" data-filter="all">すべて</button>
+      <button class="chip" data-filter="keyring">キーリング</button>
+      <button class="chip" data-filter="necklace">ネックレス</button>
+      <button class="chip" data-filter="bracelet">ブレスレット</button>
+    </div>
+    <div id="product-grid" class="grid"></div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="about-photo" id="owner-photo"></div>
+    <div class="about-text">
+      <h2 class="section-title left">About</h2>
+      <p>はじめまして、Charmixの<span id="owner-name">オーナー</span>です。</p>
+      <p>（ここに自己紹介とブランドを始めたきっかけを書きます。どんな思いでチャームを作っているか、ポップアップでお客さんと一緒に選ぶ時間が好きなこと、など。）</p>
+      <a id="ig-link" class="btn btn-primary" href="#" target="_blank" rel="noopener">Instagramを見る</a>
+    </div>
+  </section>
+
+  <section id="events" class="section events">
+    <h2 class="section-title">Pop-up Schedule</h2>
+    <ul id="event-list" class="event-list"></ul>
+    <p class="note">最新情報はInstagramでお知らせします。</p>
+  </section>
+
+  <footer class="footer">
+    <p class="logo">Charmix</p>
+    <p><a href="../../tokushoho.html">特定商取引法に基づく表記</a></p>
+    <p class="copy">© <span id="year"></span> Charmix</p>
+  </footer>
+
+  <script>window.CHARMIX_BASE = "../../";</script>
+  <script src="../../data.js"></script>
+  <script src="../../main.js"></script>
+</body>
+</html>

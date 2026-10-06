@@ -1,0 +1,87 @@
+/* 04 Boutique — 洗練ブランド：白と淡いピンク、細いセリフ体、余白、小さな色の粒 */
+:root {
+  --white: #FFFFFF; --blush: #F9E4E8; --rose: #E77FA0; --ink: #2A2326; --muted: #8C7F84; --line: #EADDE0;
+  --c1: #F6B7C9; --c2: #F9D88B; --c3: #A9D8C8; --c4: #B9B4EE;
+}
+body { background: var(--white); color: var(--ink); font-family: "Jost", "Shippori Mincho", sans-serif; font-weight: 400; letter-spacing: .02em; }
+.logo { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.9rem; letter-spacing: .14em; text-transform: uppercase; }
+.nav { background: rgba(255, 255, 255, .92); border-bottom: 1px solid var(--line); padding: 18px 32px; }
+.nav nav { gap: 32px; }
+.nav nav a { font-size: .8rem; letter-spacing: .24em; text-transform: uppercase; }
+.nav nav a:hover { color: var(--rose); }
+
+.hero { max-width: 1240px; grid-template-columns: 1fr 1.15fr; padding-top: 80px; padding-bottom: 96px; }
+.eyebrow { font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; color: var(--rose); margin: 0 0 22px; }
+.hero h1 { font-family: "Shippori Mincho", serif; font-weight: 500; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.6; letter-spacing: .06em; }
+.hl { font-style: normal; color: var(--rose); }
+.lead { color: var(--muted); font-size: .95rem; }
+.btn { padding: 15px 34px; font-size: .78rem; letter-spacing: .2em; border: 1px solid var(--ink); }
+.btn-primary { background: var(--ink); color: var(--white); }
+.btn-primary:hover { background: var(--rose); border-color: var(--rose); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--blush); }
+
+/* hero: editorial photo layout */
+.hero-art { aspect-ratio: 5 / 5.4; max-width: 560px; }
+.ph-frame { background: var(--blush); }
+.f0 { width: 64%; height: 82%; right: 0; top: 0; }
+.f1 { width: 42%; height: 46%; left: 0; bottom: 0; border: 10px solid var(--white); z-index: 2; }
+.f2 { width: 26%; height: 28%; left: 8%; top: 6%; }
+.dot { width: 12px; height: 12px; border-radius: 50%; z-index: 3; }
+.dt1 { background: var(--c1); left: 40%; top: 4%; }
+.dt2 { background: var(--c2); left: 44%; top: 4%; transform: translateX(8px); }
+.dt3 { background: var(--c3); left: 48%; top: 4%; transform: translateX(16px); }
+.dt4 { background: var(--c4); left: 52%; top: 4%; transform: translateX(24px); }
+
+.band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 0; background: var(--blush); }
+.band-track { animation-duration: 45s; }
+.band-track span { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.15rem; letter-spacing: .2em; color: var(--rose); }
+
+.section { padding: 112px 24px; }
+.section-title { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: clamp(2.2rem, 4vw, 3.2rem); letter-spacing: .08em; }
+.section-title::after { content: ""; display: block; width: 64px; height: 6px; margin: 16px auto 0; background: linear-gradient(90deg, var(--c1) 0 25%, var(--c2) 25% 50%, var(--c3) 50% 75%, var(--c4) 75%); border-radius: 3px; }
+.section-title.left::after { margin-left: 0; }
+.steps { gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.steps li { padding: 40px 32px; }
+.steps li + li { border-left: 1px solid var(--line); }
+.step-no { width: auto; height: auto; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 2.6rem; color: var(--rose); }
+.steps h3 { font-family: "Shippori Mincho", serif; font-weight: 500; letter-spacing: .08em; }
+.steps p { color: var(--muted); font-size: .92rem; }
+
+.chip { border: 0; background: none; padding: 6px 4px; margin: 0 10px; font-size: .85rem; letter-spacing: .14em; color: var(--muted); border-bottom: 1px solid transparent; }
+.chip.active { color: var(--ink); border-bottom-color: var(--rose); }
+.grid { gap: 40px 24px; }
+.card { background: none; }
+.card-img { aspect-ratio: 4 / 5; }
+.card-img img { transition: transform .6s; }
+.card:hover .card-img img { transform: scale(1.05); }
+.card-body { padding: 16px 2px 0; }
+.card-cat { font-size: .68rem; letter-spacing: .26em; color: var(--rose); }
+.card-name { font-family: "Shippori Mincho", serif; font-size: .98rem; }
+.card-price { font-size: .92rem; color: var(--muted); }
+.badge { border: 1px solid var(--line); font-size: .72rem; letter-spacing: .1em; color: var(--muted); }
+
+.about { grid-template-columns: 1fr 1fr; gap: 80px; }
+.about-photo { aspect-ratio: 3 / 4; background: var(--blush); }
+.about-text p { color: #5E5458; }
+
+.event-list { gap: 0; border-top: 1px solid var(--ink); }
+.event { border-bottom: 1px solid var(--line); padding: 22px 8px; }
+.event-date { font-family: "Cormorant Garamond", serif; color: var(--rose); }
+.event-date .d { font-size: 2.4rem; font-weight: 500; }
+.event-place { font-family: "Shippori Mincho", serif; font-size: 1.05rem; }
+.event-meta, .note { color: var(--muted); }
+
+.footer { background: var(--blush); }
+.footer .logo { margin-bottom: 14px; }
+.footer a { font-size: .82rem; letter-spacing: .08em; }
+
+@media (max-width: 760px) {
+  .hero, .about { grid-template-columns: 1fr; gap: 32px; }
+  .logo { font-size: 1.4rem; letter-spacing: .1em; }
+  .nav { padding: 14px 16px; }
+  .nav nav a { font-size: .7rem; letter-spacing: .1em; }
+  .steps li + li { border-left: 0; border-top: 1px solid var(--line); }
+  .hero-art { max-width: 360px; }
+  .nav nav { gap: 14px; }
+}

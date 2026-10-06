@@ -1,0 +1,90 @@
+/* 05 Sticker Collage — ステッカー・コラージュ：白フチ写真、マスキングテープ、細かいシール */
+:root {
+  --white: #FFFFFF; --pink: #FF5C9A; --pink-soft: #FFE0EC; --paper: #FFF7FA;
+  --yellow: #FFD84D; --mint: #5FD6B0; --blue: #6CB8FF; --purple: #A98BFF; --orange: #FF9F5A; --ink: #3B2A3F;
+}
+body {
+  color: var(--ink);
+  font-family: "Zen Maru Gothic", sans-serif;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--pink-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pink-soft) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.logo { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.8rem; }
+.logo { background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow), var(--mint), var(--blue), var(--purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav { background: var(--white); box-shadow: 0 2px 0 var(--pink-soft); }
+.nav nav a { font-family: "Fredoka", sans-serif; font-weight: 600; background: var(--pink-soft); padding: 4px 14px; border-radius: 999px; }
+.nav nav a:nth-child(2) { background: #FFF1B8; }
+.nav nav a:nth-child(3) { background: #D3F5EA; }
+
+.eyebrow { font-family: "Hachi Maru Pop", cursive; color: var(--pink); font-size: 1.05rem; margin: 0 0 10px; }
+.hero h1 { font-family: "Hachi Maru Pop", cursive; font-weight: 400; font-size: clamp(1.9rem, 4.4vw, 3.1rem); line-height: 1.6; }
+.hl { background: linear-gradient(transparent 50%, var(--yellow) 50%); }
+.lead { color: #7A6880; }
+.btn { font-family: "Fredoka", sans-serif; font-weight: 700; border-radius: 16px; padding: 12px 24px; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--pink), 0 6px 14px rgba(255, 92, 154, .3); }
+.btn-primary { background: var(--pink); color: var(--white); }
+.btn-ghost { background: var(--yellow); color: var(--ink); box-shadow: 0 0 0 2px var(--orange), 0 6px 14px rgba(255, 159, 90, .3); }
+.btn:hover { transform: rotate(-2deg) scale(1.04); }
+
+/* hero: polaroid stickers + tape + tiny stickers */
+.ph-frame { background: var(--white); padding: 10px 10px 34px; box-shadow: 0 10px 24px rgba(59, 42, 63, .18); }
+.ph-frame img, .ph-frame .ph { border-radius: 2px; }
+.f0 { width: 56%; height: 62%; left: 22%; top: 14%; transform: rotate(-4deg); z-index: 2; }
+.f1 { width: 38%; height: 42%; right: 0; top: 0; transform: rotate(7deg); }
+.f2 { width: 38%; height: 42%; left: 0; bottom: 0; transform: rotate(-9deg); }
+.tape { width: 110px; height: 30px; z-index: 4; opacity: .85; }
+.t1 { left: 38%; top: 9%; transform: rotate(-8deg); background: repeating-linear-gradient(45deg, var(--pink) 0 8px, #FF85B4 8px 16px); }
+.t2 { right: 6%; bottom: 22%; transform: rotate(14deg); background: repeating-linear-gradient(90deg, var(--mint) 0 10px, #8BE4C8 10px 20px); }
+.st { z-index: 5; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; border: 3px solid var(--white); color: var(--white); font-size: 1.3rem; box-shadow: 0 4px 10px rgba(59, 42, 63, .2); animation: wiggle 2.8s ease-in-out infinite; }
+.st1 { background: var(--pink); right: 34%; top: -2%; }
+.st2 { background: var(--mint); left: 4%; top: 30%; animation-delay: .4s; }
+.st3 { background: var(--yellow); right: 2%; top: 48%; animation-delay: .8s; }
+.st4 { background: var(--blue); left: 40%; bottom: -2%; animation-delay: 1.2s; }
+.st5 { background: var(--purple); right: 18%; bottom: 0; width: 30px; height: 30px; font-size: .8rem; }
+.st6 { background: var(--orange); left: 16%; top: 4%; width: 34px; height: 34px; font-size: .9rem; animation-delay: 1.6s; }
+@keyframes wiggle { 50% { transform: rotate(14deg) scale(1.08); } }
+
+.band { background: var(--white); padding: 12px 0; border-top: 3px dotted var(--pink); border-bottom: 3px dotted var(--pink); }
+.band-track span { font-family: "Fredoka", sans-serif; font-weight: 700; letter-spacing: .08em; color: var(--pink); }
+
+.section-title { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: clamp(1.9rem, 3.6vw, 2.6rem); display: table; margin-left: auto; margin-right: auto; background: var(--white); padding: 4px 26px; border-radius: 14px; box-shadow: 0 0 0 3px var(--pink), 6px 6px 0 3px var(--yellow); transform: rotate(-2deg); }
+.section-title.left { margin-left: 0; }
+.steps li { background: var(--white); padding: 28px; border-radius: 6px; box-shadow: 0 10px 24px rgba(59, 42, 63, .12); position: relative; }
+.steps li::before { content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 24px; transform: translateX(-50%) rotate(-3deg); opacity: .8; }
+.steps li:nth-child(1)::before { background: #FFB3CF; }
+.steps li:nth-child(2)::before { background: #FFE58A; }
+.steps li:nth-child(3)::before { background: #9FE7CF; }
+.steps li:nth-child(2) { transform: rotate(1.5deg); }
+.steps li:nth-child(3) { transform: rotate(-1deg); }
+.step-no { border-radius: 50%; color: var(--white); font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.2rem; background: var(--pink); }
+.steps li:nth-child(2) .step-no { background: var(--orange); }
+.steps li:nth-child(3) .step-no { background: var(--mint); }
+.steps p { color: #7A6880; }
+
+.chip { border: 0; padding: 7px 18px; border-radius: 999px; font-weight: 700; background: var(--white); box-shadow: 0 3px 8px rgba(59, 42, 63, .12); }
+.chip.active { background: var(--pink); color: var(--white); }
+.card { background: var(--white); padding: 10px; box-shadow: 0 10px 24px rgba(59, 42, 63, .13); border-radius: 4px; }
+.card:nth-child(3n+1) { transform: rotate(-1.5deg); }
+.card:nth-child(3n+2) { transform: rotate(1deg); }
+.card:hover { transform: rotate(0) translateY(-4px); }
+.card-img { border-radius: 2px; }
+.card-body { padding: 12px 6px 6px; }
+.card-cat { font-family: "Fredoka", sans-serif; font-size: .72rem; letter-spacing: .1em; color: var(--pink); }
+.card-name { font-weight: 700; }
+.card-price { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.15rem; }
+.badge { border-radius: 999px; background: var(--pink-soft); color: var(--pink); font-weight: 700; }
+
+.about-photo { background: var(--white); padding: 14px 14px 48px; box-shadow: 0 14px 30px rgba(59, 42, 63, .18); transform: rotate(-3deg); position: relative; }
+
+.event { background: var(--white); border-radius: 6px; box-shadow: 0 8px 18px rgba(59, 42, 63, .1); border-left: 8px solid var(--pink); }
+.event:nth-child(2) { border-left-color: var(--orange); }
+.event:nth-child(3) { border-left-color: var(--mint); }
+.event-date { font-family: "Fredoka", sans-serif; font-weight: 700; color: var(--pink); }
+.event-date .d { font-size: 2.2rem; }
+.event-place { font-weight: 700; }
+.event-meta, .note { color: #7A6880; }
+
+.footer { background: var(--pink); color: var(--white); }
+.footer .logo { background: none; color: var(--white); }

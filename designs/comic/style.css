@@ -1,0 +1,77 @@
+/* 03 American Comic — アメコミ：太い黒線、網点、吹き出し、爆発マーク */
+:root {
+  --white: #FFFFFF; --pink: #FF3D8B; --pink-soft: #FFC2DA; --yellow: #FFE11A; --cyan: #2BD3F0;
+  --black: #111111;
+}
+body {
+  background-color: var(--white);
+  background-image: radial-gradient(var(--pink-soft) 2.2px, transparent 2.6px);
+  background-size: 14px 14px;
+  color: var(--black);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+}
+.logo { font-family: "Bangers", cursive; font-size: 2rem; letter-spacing: .06em; color: var(--yellow); -webkit-text-stroke: 2px var(--black); text-shadow: 3px 3px 0 var(--black); }
+.nav { background: var(--pink); border-bottom: 4px solid var(--black); }
+.nav nav a { font-family: "Bangers", cursive; font-size: 1.3rem; letter-spacing: .06em; color: var(--white); text-shadow: 2px 2px 0 var(--black); }
+.nav nav a:hover { color: var(--yellow); }
+
+.eyebrow { display: inline-block; font-family: "Bangers", cursive; font-size: 1.5rem; letter-spacing: .06em; background: var(--yellow); border: 3px solid var(--black); padding: 2px 14px; transform: rotate(-3deg); box-shadow: 4px 4px 0 var(--black); margin: 0 0 18px; }
+.hero h1 { font-family: "Dela Gothic One", sans-serif; font-weight: 400; font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 1.4; }
+.hl { color: var(--pink); -webkit-text-stroke: 1.5px var(--black); text-shadow: 4px 4px 0 var(--black); }
+.lead { background: var(--white); border: 3px solid var(--black); padding: 12px 16px; box-shadow: 5px 5px 0 var(--black); }
+.btn { font-family: "Dela Gothic One", sans-serif; border: 3px solid var(--black); padding: 12px 24px; box-shadow: 5px 5px 0 var(--black); }
+.btn-primary { background: var(--pink); color: var(--white); }
+.btn-ghost { background: var(--cyan); color: var(--black); }
+.btn:hover { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--black); }
+
+/* hero: comic panels */
+.ph-frame { border: 5px solid var(--black); box-shadow: 8px 8px 0 var(--black); background: var(--yellow); }
+.f0 { width: 60%; height: 64%; left: 4%; top: 8%; transform: rotate(-3deg); z-index: 1; }
+.f1 { width: 40%; height: 40%; right: 0; top: 2%; transform: rotate(4deg); z-index: 2; }
+.f2 { width: 46%; height: 42%; right: 6%; bottom: 2%; transform: rotate(2deg); z-index: 2; }
+.burst {
+  display: grid; place-items: center; z-index: 4;
+  font-family: "Bangers", cursive; letter-spacing: .04em; color: var(--black);
+  clip-path: polygon(50% 0, 61% 26%, 92% 10%, 76% 38%, 100% 50%, 76% 62%, 92% 90%, 61% 74%, 50% 100%, 39% 74%, 8% 90%, 24% 62%, 0 50%, 24% 38%, 8% 10%, 39% 26%);
+  animation: pop 1.6s ease-in-out infinite;
+}
+.b1 { width: 120px; height: 120px; left: -2%; bottom: 8%; background: var(--yellow); font-size: 1.8rem; }
+.b2 { width: 96px; height: 96px; right: 34%; top: -6%; background: var(--cyan); font-size: 1.4rem; animation-delay: .5s; }
+@keyframes pop { 50% { transform: scale(1.1) rotate(-6deg); } }
+.bubble { left: 40%; top: 42%; z-index: 5; background: var(--white); border: 3px solid var(--black); border-radius: 50%; padding: 18px 22px; font-weight: 700; font-size: .85rem; line-height: 1.4; text-align: center; box-shadow: 4px 4px 0 var(--black); }
+.bubble::after { content: ""; position: absolute; left: 22px; bottom: -16px; border: 10px solid transparent; border-top: 16px solid var(--black); }
+
+.band { background: var(--yellow); border-top: 4px solid var(--black); border-bottom: 4px solid var(--black); padding: 8px 0; transform: rotate(-1.5deg); margin: 0 -10px; }
+.band-track span { font-family: "Bangers", cursive; font-size: 1.6rem; letter-spacing: .08em; color: var(--pink); -webkit-text-stroke: 1px var(--black); }
+
+.section-title { font-family: "Bangers", cursive; font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: .06em; color: var(--yellow); -webkit-text-stroke: 2px var(--black); text-shadow: 5px 5px 0 var(--black); }
+.steps li { background: var(--white); border: 4px solid var(--black); padding: 26px; box-shadow: 8px 8px 0 var(--black); position: relative; }
+.steps li:nth-child(1) { background: var(--pink-soft); }
+.steps li:nth-child(2) { background: #FFF6A8; }
+.steps li:nth-child(3) { background: #BFF3FC; }
+.step-no { font-family: "Bangers", cursive; font-size: 1.6rem; background: var(--black); color: var(--yellow); border-radius: 50%; }
+.steps h3 { font-family: "Dela Gothic One", sans-serif; font-weight: 400; }
+
+.chip { border: 3px solid var(--black); background: var(--white); padding: 6px 16px; font-weight: 700; box-shadow: 3px 3px 0 var(--black); }
+.chip.active { background: var(--pink); color: var(--white); }
+.card { background: var(--white); border: 4px solid var(--black); box-shadow: 7px 7px 0 var(--black); }
+.card:nth-child(odd) { transform: rotate(-1deg); }
+.card:nth-child(even) { transform: rotate(1deg); }
+.card:hover { transform: rotate(0) scale(1.03); }
+.card-img { border-bottom: 4px solid var(--black); }
+.card-cat { font-family: "Bangers", cursive; letter-spacing: .08em; color: var(--pink); }
+.card-name { font-weight: 700; }
+.card-price { font-family: "Dela Gothic One", sans-serif; font-size: 1.15rem; }
+.badge { border: 3px solid var(--black); background: var(--yellow); font-weight: 700; }
+
+.about-photo { border: 5px solid var(--black); box-shadow: 12px 12px 0 var(--pink); transform: rotate(-2deg); }
+.about-text p:nth-of-type(2) { background: var(--white); border: 3px solid var(--black); padding: 14px 18px; border-radius: 24px; position: relative; }
+
+.event { background: var(--white); border: 4px solid var(--black); box-shadow: 6px 6px 0 var(--black); }
+.event-date { background: var(--cyan); border: 3px solid var(--black); font-family: "Bangers", cursive; letter-spacing: .04em; }
+.event-date .d { font-size: 2.2rem; }
+.event-place { font-weight: 700; }
+.note { font-weight: 700; }
+
+.footer { background: var(--black); color: var(--white); border-top: 6px solid var(--pink); }
