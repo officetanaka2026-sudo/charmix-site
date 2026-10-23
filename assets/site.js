@@ -39,6 +39,7 @@
   var grid = document.getElementById("grid");
   function render(cat) {
     var list = products.filter(function (p) { return !cat || p.category === cat; });
+    if (!cat) list = list.slice(0, 8); // ALL ITEM は2行（4列×2）まで
     if (!list.length) { grid.innerHTML = '<p class="empty">COMING SOON</p>'; return; }
     grid.innerHTML = list.map(function (p) {
       var price = p.price ? '<p class="item-price">¥' + Number(p.price).toLocaleString("ja-JP") + " (tax included)</p>" : "";
