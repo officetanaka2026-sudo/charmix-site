@@ -24,5 +24,5 @@ window.CHARMIX_EVENTS = [
 ];
 
 window.CHARMIX_INFO = {
-  contact: "mailto:hello@example.com", // 問い合わせ先。自分のメールアドレスに変更
+  contact: "mailto:spmdrk0118@gmail.com", // 問い合わせ先
 };
