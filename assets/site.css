@@ -35,6 +35,13 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .dots { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); display: flex; gap: 10px; }
 .dots button { width: 28px; height: 1px; background: rgba(255,255,255,.55); }
 .dots button.is-active { background: #FFF; }
+@media (min-width: 761px) {
+  /* 写真が縦長なので、PCでは3枚を横に並べて見せる */
+  .hero { height: auto; max-height: none; min-height: 0; }
+  .slides { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .slide { position: static; height: auto; aspect-ratio: 4 / 5; opacity: 1; }
+  .dots { display: none; }
+}
 
 /* intro */
 .intro { text-align: center; padding: 120px 24px 40px; }
@@ -97,6 +104,31 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .design-tag { position: fixed; right: 16px; bottom: 16px; z-index: 30; font-family: var(--en); font-size: 10px; letter-spacing: .14em; padding: 8px 14px; background: rgba(26,26,26,.8); color: #FFF; }
 
+/* event page */
+.sp { display: none; }
+.ev-hero { position: relative; height: calc(100vh - 70px); min-height: 480px; max-height: 860px; overflow: hidden; background: var(--soft); }
+.ev-hero img { width: 100%; height: 100%; object-fit: cover; }
+.ev-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(0,0,0,.55)); }
+.ev-hero-text { position: absolute; left: 0; right: 0; bottom: 64px; z-index: 1; text-align: center; color: #FFF; padding: 0 20px; }
+.ev-hero-text .eyebrow { color: rgba(255,255,255,.85); margin-bottom: 18px; }
+.ev-hero-text h1 { font-weight: 400; font-size: 24px; line-height: 1.8; letter-spacing: .12em; margin: 0 0 16px; }
+.ev-hero-text p { margin: 0; font-size: 12px; }
+.ev-img { aspect-ratio: 4 / 5; background: var(--soft); overflow: hidden; }
+.ev-img img { width: 100%; height: 100%; object-fit: cover; }
+.ev-split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.ev-text h3, .ev-steps h3, .ev-points h3, .ev-org h3 { font-weight: 400; font-size: 15px; letter-spacing: .12em; margin: 0 0 14px; }
+.ev-text p { line-height: 2.4; margin: 0 0 18px; }
+.ev-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
+.ev-steps .no { font-family: var(--en); font-size: 11px; letter-spacing: .3em; color: var(--muted); margin: 20px 0 4px; }
+.ev-steps p { margin: 0; }
+.ev-points { list-style: none; padding: 0; margin: 0 auto; max-width: 960px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; border-top: 1px solid var(--line); }
+.ev-points li { padding: 32px 4px; border-bottom: 1px solid var(--line); }
+.ev-points p { margin: 0; }
+.ev-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.ev-gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--soft); }
+.ev-org { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; max-width: 960px; margin: 0 auto; }
+.ev-org ul { margin: 0; padding-left: 1.2em; line-height: 2.4; }
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, 1fr); gap: 40px 14px; }
 }
@@ -113,4 +145,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .news li { grid-template-columns: 1fr; gap: 2px; padding: 18px 4px; }
   .links { grid-template-columns: 1fr; }
   .footer { margin-top: 100px; padding: 48px 16px 64px; }
+  .sp { display: inline; }
+  .ev-hero { height: 78vh; min-height: 420px; }
+  .ev-hero-text { bottom: 40px; }
+  .ev-hero-text h1 { font-size: 18px; }
+  .ev-split, .ev-org { grid-template-columns: 1fr; gap: 32px; }
+  .ev-steps { grid-template-columns: 1fr; }
+  .ev-points { grid-template-columns: 1fr; }
+  .ev-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }

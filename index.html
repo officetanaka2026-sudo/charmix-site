@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CHARMIX</title>
-  <meta name="description" content="好きなチャームを選んで、自分だけのひとつに。キーリング・ネックレス・ブレスレットのカスタマイズブランド CHARMIX。">
+  <meta name="description" content="好きなチャームを選んで、自分だけのひとつに。たくさんのチャームから選んで作る、チャームビュッフェ CHARMIX。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,19 +17,16 @@
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav">
       <a href="#">HOME</a>
-      <a href="#popup">POP-UP</a>
-      <a href="#online">ONLINE</a>
-      <a href="#concept">CONCEPT</a>
-      <a href="#links">SNS</a>
-      <a href="mailto:hello@example.com">CONTACT</a>
+      <a href="event.html">EVENT</a>
+      <a class="js-contact" href="mailto:hello@example.com">CONTACT</a>
     </nav>
   </header>
 
   <section class="hero" aria-label="CHARMIX">
     <div class="slides">
-      <img class="slide is-active" src="https://images.unsplash.com/photo-1631050164355-822f8ab7dcb9?w=2400&q=80&auto=format&fit=crop" alt="">
-      <img class="slide" src="https://images.unsplash.com/photo-1631050165122-626a1377fbce?w=2400&q=80&auto=format&fit=crop" alt="">
-      <img class="slide" src="https://images.unsplash.com/photo-1778278553445-9cb87c89c60f?w=2400&q=80&auto=format&fit=crop" alt="">
+      <img class="slide is-active" src="images/top-1.jpg" alt="テーブルに並んだたくさんのチャーム">
+      <img class="slide" src="images/top-2.jpg" alt="グリーンの背景に並んだチャーム">
+      <img class="slide" src="images/top-3.jpg" alt="ゴールドやシルバーのチャーム">
     </div>
     <div class="dots"><button class="is-active" aria-label="1"></button><button aria-label="2"></button><button aria-label="3"></button></div>
   </section>
@@ -39,7 +36,7 @@
     <p class="intro-text">好きなチャームを、好きなだけ。<br>自分だけのひとつに。</p>
   </section>
 
-  <section class="block" id="online">
+  <section class="block" id="items">
     <h2 class="title">RECOMMEND</h2>
     <div class="cats">
       <button class="is-active" data-cat="">ALL ITEM</button>
@@ -48,40 +45,26 @@
       <button data-cat="bracelet">BRACELET</button>
     </div>
     <div class="grid" id="grid"></div>
-    <p class="more"><a href="#online">VIEW ALL</a></p>
   </section>
 
-  <section class="block" id="popup">
-    <h2 class="title">POP-UP</h2>
+  <section class="block" id="event">
+    <h2 class="title">EVENT</h2>
     <ul class="news" id="news"></ul>
-    <p class="more"><a id="ig-more" href="#" target="_blank" rel="noopener">MORE VIEW</a></p>
+    <p class="more"><a href="event.html">ABOUT CHARM BUFFET</a></p>
   </section>
 
   <section class="concept" id="concept">
-    <div class="concept-img"><img src="images/keyring-03.jpg" alt="CHARMIX keyring" loading="lazy"></div>
+    <div class="concept-img"><img src="images/event-06.jpg" alt="チャームを選ぶトレー" loading="lazy"></div>
     <div class="concept-text">
       <h2 class="title left">CONCEPT</h2>
       <p>ちいさなチャームが、毎日の気分を少しだけ変えてくれる。<br>色、かたち、組み合わせ。選ぶ時間そのものを楽しんでほしくて、<br>CHARMIXを始めました。</p>
     </div>
   </section>
 
-  <section class="block" id="links">
-    <h2 class="title">LINKS</h2>
-    <div class="links">
-      <a class="link-card" id="ig-link" href="#" target="_blank" rel="noopener">
-        <div class="link-img"><img src="https://images.unsplash.com/photo-1759493946930-150aee20977c?w=1200&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
-        <p class="link-name">Instagram</p><p class="link-sub">follow us</p>
-      </a>
-      <a class="link-card" href="#popup">
-        <div class="link-img"><img src="https://images.unsplash.com/photo-1760144597396-4f902f5026a8?w=1200&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
-        <p class="link-name">Pop-up Store</p><p class="link-sub">schedule</p>
-      </a>
-    </div>
-  </section>
-
   <footer class="footer">
     <nav class="foot-nav">
-      <a href="#links">INSTAGRAM</a>
+      <a href="event.html">EVENT</a>
+      <a class="js-contact" href="mailto:hello@example.com">CONTACT</a>
     </nav>
     <p class="copy">© <span id="year"></span> - CHARMIX</p>
   </footer>
